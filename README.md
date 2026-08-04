@@ -1,11 +1,11 @@
-﻿# 🍽️ The Golden Spoon — ★★ Michelin Fine Dining Web Application
+﻿# 🍽️ Golden Spoon — Fine Dining Restaurant & Table Reservation Platform
 
-Two Michelin-starred restaurant application featuring seasonal tasting menus, wine cellar pairings, private dining reservations, and executive chef profiles.
+High-end culinary experience platform featuring online table reservations, interactive digital menus, chef specials, and event booking.
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript & React 18
-- **Styling**: TailwindCSS
+- **Styling**: TailwindCSS & Lucide Icons
 - **Database**: Prisma ORM & SQLite
 
 ## 🚀 Quick Start
@@ -14,6 +14,7 @@ npm install
 npx prisma db push
 npm run db:seed
 npm run dev
-``n
+`
+
 ## 📄 License
 MIT License.
