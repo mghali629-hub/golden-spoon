@@ -30,41 +30,41 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#121212]/90 backdrop-blur-xl border-b border-[#D4AF37]/20 font-serif">
+    <header className="sticky top-0 z-40 bg-[#0F0F0F]/95 backdrop-blur-xl border-b border-[#D4AF37]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#E67E22] flex items-center justify-center text-black shadow-lg shadow-[#D4AF37]/20">
             <UtensilsCrossed className="w-6 h-6" />
           </div>
           <div>
-            <span className="text-xl font-bold tracking-tight text-white block">Golden Spoon</span>
+            <span className="font-serif text-xl font-bold tracking-tight text-white block">Golden Spoon</span>
             <span className="text-[9px] tracking-[0.25em] text-[#D4AF37] font-sans font-semibold uppercase block -mt-1">Michelin Fine Dining</span>
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold py-2">
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-sans font-bold py-2">
           {navLinks.slice(0, 5).map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors whitespace-nowrap py-1 ${pathname === link.href ? 'text-amber-400 border-b-2 border-amber-400 font-bold' : 'text-zinc-100 hover:text-white'}`}
+              className={`transition-colors whitespace-nowrap py-1 ${pathname === link.href ? 'text-[#D4AF37] border-b-2 border-[#D4AF37] font-extrabold' : 'text-white hover:text-[#D4AF37]'}`}
             >
               {link.label}
             </Link>
           ))}
           {navLinks.length > 5 && (
             <div className="relative group py-1">
-              <button className="flex items-center gap-1.5 text-zinc-100 hover:text-white font-semibold text-sm transition-colors cursor-pointer py-1">
+              <button className="flex items-center gap-1.5 text-white hover:text-[#D4AF37] font-bold text-sm transition-colors cursor-pointer py-1">
                 <span>More</span>
                 <span className="text-[10px] opacity-80">▼</span>
               </button>
-              <div className="absolute right-0 top-full mt-1 w-56 bg-zinc-950/98 backdrop-blur-xl border border-zinc-800 rounded-xl shadow-2xl p-2 hidden group-hover:block group-focus-within:block z-50">
+              <div className="absolute right-0 top-full mt-1 w-56 bg-[#181818] border border-[#D4AF37]/30 rounded-xl shadow-2xl p-2 hidden group-hover:block group-focus-within:block z-50">
                 <div className="grid grid-cols-1 gap-1 max-h-80 overflow-y-auto no-scrollbar">
                   {navLinks.slice(5).map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="px-3 py-2 rounded-lg text-xs font-medium text-zinc-200 hover:bg-zinc-800 hover:text-white transition-colors block whitespace-nowrap"
+                      className="px-3 py-2 rounded-lg text-xs font-semibold text-zinc-100 hover:bg-[#252525] hover:text-[#D4AF37] transition-colors block whitespace-nowrap"
                     >
                       {link.label}
                     </Link>
@@ -77,9 +77,9 @@ export function Header() {
 
         <Link
           href="/reservation"
-          className="font-sans px-4 py-2 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#E67E22] text-black font-bold text-[11px] uppercase tracking-wider shadow-lg transition-all shrink-0"
+          className="font-sans px-5 py-2.5 rounded-full bg-[#D4AF37] hover:bg-[#F3C649] text-black font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all shrink-0"
         >
-          Reserve
+          RESERVE
         </Link>
       </div>
     </header>
