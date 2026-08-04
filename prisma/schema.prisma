@@ -1,0 +1,77 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model MenuItem {
+  id          Int      @id @default(autoincrement())
+  name        String
+  category    String
+  price       String
+  description String
+  image       String
+}
+
+model Reservation {
+  id          Int      @id @default(autoincrement())
+  guestName   String
+  phone       String
+  guests      Int
+  date        String
+  time        String
+  createdAt   DateTime @default(now())
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  guestName String
+  rating    Float
+  comment   String
+  createdAt DateTime @default(now())
+}
+
+model SpecialEvent {
+  id          Int      @id @default(autoincrement())
+  title       String
+  date        String
+  price       String
+  description String
+}
+
+model GiftVoucher {
+  id             Int      @id @default(autoincrement())
+  code           String   @unique
+  amount         Float
+  recipientEmail String
+  createdAt      DateTime @default(now())
+}
+
+model WineItem {
+  id          Int      @id @default(autoincrement())
+  name        String
+  vintage     String
+  region      String
+  price       String
+}
+
+model ChefProfile {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  bio       String
+  awards    String
+  photo     String
+}
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique
+  title     String
+  author    String
+  content   String
+  createdAt DateTime @default(now())
+}
